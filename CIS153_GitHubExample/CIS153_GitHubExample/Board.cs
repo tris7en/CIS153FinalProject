@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CIS153FinalProject
+namespace CIS153_GitHubExample
 {
     class Board
     {
