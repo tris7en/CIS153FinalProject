@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace _153Final
+namespace CIS153FinalProject
 {
     class Board
     {
