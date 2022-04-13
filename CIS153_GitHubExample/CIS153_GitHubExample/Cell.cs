@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace _153Final
+namespace CIS153FinalProject
 {
     class Cell
     {
