@@ -992,8 +992,8 @@ namespace CIS153_GitHubExample
 
                         MessageBox.Show(message);
                         
-                        
-
+                         File.AppendAllText(@"C:\Users\trist\Desktop\CIS153FinalProject-main\CIS153_GitHubExample\CIS153_GitHubExample\Resources\PlayerStats.txt", "1,0,0,1,\n");
+                        Stats.Add(new PlayerStats("1", "0", "0", "1"));
                     }
 
                     checkForBlueWin(gameBoard);
@@ -1005,7 +1005,9 @@ namespace CIS153_GitHubExample
                         string message = "Winner Blue";
 
                         MessageBox.Show(message);
-
+                        
+                        File.AppendAllText(@"C:\Users\trist\Desktop\CIS153FinalProject-main\CIS153_GitHubExample\CIS153_GitHubExample\Resources\PlayerStats.txt", "0,1,0,1,\n");
+                        Stats.Add(new PlayerStats("0", "1", "0", "1"));
                     }
 
                     //makes other players turn start
@@ -1067,6 +1069,9 @@ namespace CIS153_GitHubExample
                         string message = "Winner Red";
 
                         MessageBox.Show(message);
+                        
+                        File.AppendAllText(@"C:\Users\trist\Desktop\CIS153FinalProject-main\CIS153_GitHubExample\CIS153_GitHubExample\Resources\PlayerStats.txt", "1,0,0,1,\n");
+                        Stats.Add(new PlayerStats("1", "0", "0", "1"));
 
                     }
 
@@ -1079,7 +1084,10 @@ namespace CIS153_GitHubExample
                         string message = "Winner Blue";
 
                         MessageBox.Show(message);
-
+                        
+                        File.AppendAllText(@"C:\Users\trist\Desktop\CIS153FinalProject-main\CIS153_GitHubExample\CIS153_GitHubExample\Resources\PlayerStats.txt", "0,1,0,1,\n");
+                        Stats.Add(new PlayerStats("0", "1", "0", "1"));
+                        
                     }
 
                     //makes other players turn start
@@ -1127,7 +1135,8 @@ namespace CIS153_GitHubExample
                         string message = "Winner Red";
 
                         MessageBox.Show(message);
-
+                        File.AppendAllText(@"C:\Users\trist\Desktop\CIS153FinalProject-main\CIS153_GitHubExample\CIS153_GitHubExample\Resources\PlayerStats.txt", "1,0,0,1,\n");
+                        Stats.Add(new PlayerStats("1", "0", "0", "1"));
                     }
 
                     checkForBlueWin(gameBoard);
@@ -1139,7 +1148,8 @@ namespace CIS153_GitHubExample
                         string message = "Winner Blue";
 
                         MessageBox.Show(message);
-
+                        File.AppendAllText(@"C:\Users\trist\Desktop\CIS153FinalProject-main\CIS153_GitHubExample\CIS153_GitHubExample\Resources\PlayerStats.txt", "0,1,0,1,\n");
+                        Stats.Add(new PlayerStats("0", "1", "0", "1"));
                     }
 
 
@@ -1188,7 +1198,8 @@ namespace CIS153_GitHubExample
                         string message = "Winner Red";
 
                         MessageBox.Show(message);
-
+                        File.AppendAllText(@"C:\Users\trist\Desktop\CIS153FinalProject-main\CIS153_GitHubExample\CIS153_GitHubExample\Resources\PlayerStats.txt", "1,0,0,1,\n");
+                        Stats.Add(new PlayerStats("1", "0", "0", "1"));
                     }
 
                     checkForBlueWin(gameBoard);
@@ -1200,7 +1211,8 @@ namespace CIS153_GitHubExample
                         string message = "Winner Blue";
 
                         MessageBox.Show(message);
-
+                        File.AppendAllText(@"C:\Users\trist\Desktop\CIS153FinalProject-main\CIS153_GitHubExample\CIS153_GitHubExample\Resources\PlayerStats.txt", "0,1,0,1,\n");
+                        Stats.Add(new PlayerStats("0", "1", "0", "1"));
                     }
 
 
@@ -1248,7 +1260,8 @@ namespace CIS153_GitHubExample
                         string message = "Winner Red";
 
                         MessageBox.Show(message);
-
+                        File.AppendAllText(@"C:\Users\trist\Desktop\CIS153FinalProject-main\CIS153_GitHubExample\CIS153_GitHubExample\Resources\PlayerStats.txt", "1,0,0,1,\n");
+                        Stats.Add(new PlayerStats("1", "0", "0", "1"));
                     }
 
                     checkForBlueWin(gameBoard);
@@ -1260,7 +1273,8 @@ namespace CIS153_GitHubExample
                         string message = "Winner Blue";
 
                         MessageBox.Show(message);
-
+                        File.AppendAllText(@"C:\Users\trist\Desktop\CIS153FinalProject-main\CIS153_GitHubExample\CIS153_GitHubExample\Resources\PlayerStats.txt", "0,1,0,1,\n");
+                        Stats.Add(new PlayerStats("0", "1", "0", "1"));
                     }
 
                     //makes other players turn start
@@ -1310,7 +1324,8 @@ namespace CIS153_GitHubExample
                         string message = "Winner Red";
 
                         MessageBox.Show(message);
-
+                        File.AppendAllText(@"C:\Users\trist\Desktop\CIS153FinalProject-main\CIS153_GitHubExample\CIS153_GitHubExample\Resources\PlayerStats.txt", "1,0,0,1,\n");
+                        Stats.Add(new PlayerStats("1", "0", "0", "1"));
                     }
 
                     checkForBlueWin(gameBoard);
@@ -1322,7 +1337,8 @@ namespace CIS153_GitHubExample
                         string message = "Winner Blue";
 
                         MessageBox.Show(message);
-
+                        File.AppendAllText(@"C:\Users\trist\Desktop\CIS153FinalProject-main\CIS153_GitHubExample\CIS153_GitHubExample\Resources\PlayerStats.txt", "0,1,0,1,\n");
+                        Stats.Add(new PlayerStats("0", "1", "0", "1"));
                     }
 
                     //makes other players turn start
@@ -1371,7 +1387,8 @@ namespace CIS153_GitHubExample
                         string message = "Winner Red";
 
                         MessageBox.Show(message);
-
+                        File.AppendAllText(@"C:\Users\trist\Desktop\CIS153FinalProject-main\CIS153_GitHubExample\CIS153_GitHubExample\Resources\PlayerStats.txt", "1,0,0,1,\n");
+                        Stats.Add(new PlayerStats("1", "0", "0", "1"));
                     }
 
                     checkForBlueWin(gameBoard);
@@ -1383,7 +1400,8 @@ namespace CIS153_GitHubExample
                         string message = "Winner Blue";
 
                         MessageBox.Show(message);
-
+                        File.AppendAllText(@"C:\Users\trist\Desktop\CIS153FinalProject-main\CIS153_GitHubExample\CIS153_GitHubExample\Resources\PlayerStats.txt", "0,1,0,1,\n");
+                        Stats.Add(new PlayerStats("0", "1", "0", "1"));
                     }
 
                     //makes other players turn start
