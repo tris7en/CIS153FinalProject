@@ -33,6 +33,8 @@ namespace CIS153_GitHubExample.Properties
         {
         }
 
+        public static string TextFile1 { get; internal set; }
+
         /// <summary>
         ///   Returns the cached ResourceManager instance used by this class.
         /// </summary>

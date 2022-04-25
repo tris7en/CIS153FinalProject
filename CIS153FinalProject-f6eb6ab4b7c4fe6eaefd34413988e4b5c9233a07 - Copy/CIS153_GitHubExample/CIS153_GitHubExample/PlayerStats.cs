@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace final_Project
+namespace CIS153_GitHubExample
 {
     class PlayerStats
     {

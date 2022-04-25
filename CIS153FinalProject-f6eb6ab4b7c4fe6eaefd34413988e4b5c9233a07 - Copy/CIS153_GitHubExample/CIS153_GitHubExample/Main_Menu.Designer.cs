@@ -119,6 +119,7 @@ namespace CIS153_GitHubExample
             this.Controls.Add(this.pic_connect4);
             this.Name = "Main_Menu";
             this.Text = "Form2";
+            this.Load += new System.EventHandler(this.Main_Menu_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pic_connect4)).EndInit();
             this.ResumeLayout(false);
 

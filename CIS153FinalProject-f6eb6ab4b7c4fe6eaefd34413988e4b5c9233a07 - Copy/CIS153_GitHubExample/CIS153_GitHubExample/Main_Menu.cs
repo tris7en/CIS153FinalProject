@@ -52,5 +52,10 @@ namespace CIS153_GitHubExample
         {
             this.Close();
         }
+
+        private void Main_Menu_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

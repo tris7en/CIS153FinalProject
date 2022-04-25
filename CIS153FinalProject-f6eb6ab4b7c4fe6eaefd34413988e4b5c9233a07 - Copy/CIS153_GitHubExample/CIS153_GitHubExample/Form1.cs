@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace final_Project
+namespace CIS153_GitHubExample
 {
     public partial class Form1 : Form
     {
@@ -54,7 +54,7 @@ namespace final_Project
 
             try
             {
-                fileContent = final_Project.Properties.Resources.PlayerStatistics;
+                fileContent = CIS153_GitHubExample.Properties.Resources.TextFile1;
                 Console.WriteLine("Success");
             }
             catch (Exception e)
@@ -161,6 +161,11 @@ namespace final_Project
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
