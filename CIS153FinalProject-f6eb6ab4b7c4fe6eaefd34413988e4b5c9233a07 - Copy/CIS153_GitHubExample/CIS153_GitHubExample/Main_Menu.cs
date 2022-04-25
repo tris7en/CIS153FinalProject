@@ -15,19 +15,43 @@ namespace CIS153_GitHubExample
         public Main_Menu()
         {
             InitializeComponent();
+            this.WindowState = FormWindowState.Maximized;
         }
 
         private void btn_1Player_Click(object sender, EventArgs e)
         {
-            //Form 1Player = new Form...();
-            //1Player.Show();
+            load1Player();
+        }
 
+        public void load1Player()
+        {
+            _1Player formToLoad4 = new _1Player(this);
+
+            _1Player formToLoadNoOverload4 = new _1Player();
+
+            formToLoadNoOverload4.formPassedToMe(this);
+
+            formToLoad4.Show();
+
+            this.Hide();
         }
 
         private void btn_2player_Click(object sender, EventArgs e)
         {
-            //Form 2Player = new Form....();
-            //2Player.Show();
+            load2Player();
+        }
+
+        public void load2Player()
+        {
+            Form2 formToLoad2 = new Form2(this);
+
+            Form2 formToLoadNoOverload2 = new Form2();
+
+            formToLoadNoOverload2.formPassedToMe(this);
+
+            formToLoad2.Show();
+
+            this.Hide();
         }
 
         private void stats_Click(object sender, EventArgs e)

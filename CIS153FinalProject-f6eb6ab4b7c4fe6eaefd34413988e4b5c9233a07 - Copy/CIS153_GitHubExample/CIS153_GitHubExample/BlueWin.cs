@@ -10,24 +10,12 @@ using System.Windows.Forms;
 
 namespace CIS153_GitHubExample
 {
-    public partial class End_Screen : Form
+    public partial class BlueWin : Form
     {
-        Form2 formend;
-        public End_Screen()
+        public BlueWin()
         {
             InitializeComponent();
             this.WindowState = FormWindowState.Maximized;
-        }
-
-        public End_Screen(Form2 EndScreen2)
-        {
-            InitializeComponent();
-            formend = EndScreen2;
-        }
-
-        public void formPassedToMe(Form2 EndScreen2)
-        {
-            formend = EndScreen2;
         }
 
         private void btn_Menu_Click(object sender, EventArgs e)

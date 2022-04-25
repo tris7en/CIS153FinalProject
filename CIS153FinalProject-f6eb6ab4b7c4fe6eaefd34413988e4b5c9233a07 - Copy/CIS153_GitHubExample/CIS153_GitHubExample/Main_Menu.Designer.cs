@@ -40,6 +40,7 @@ namespace CIS153_GitHubExample
             // 
             // pic_connect4
             // 
+            this.pic_connect4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pic_connect4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pic_connect4.BackgroundImage")));
             this.pic_connect4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pic_connect4.Location = new System.Drawing.Point(270, 93);
@@ -50,6 +51,7 @@ namespace CIS153_GitHubExample
             // 
             // btn_1Player
             // 
+            this.btn_1Player.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btn_1Player.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_1Player.BackgroundImage")));
             this.btn_1Player.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_1Player.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -66,6 +68,7 @@ namespace CIS153_GitHubExample
             // 
             // btn_2player
             // 
+            this.btn_2player.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btn_2player.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_2player.BackgroundImage")));
             this.btn_2player.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_2player.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -80,6 +83,7 @@ namespace CIS153_GitHubExample
             // 
             // stats
             // 
+            this.stats.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.stats.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("stats.BackgroundImage")));
             this.stats.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.stats.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -94,6 +98,7 @@ namespace CIS153_GitHubExample
             // 
             // exit
             // 
+            this.exit.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.exit.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("exit.BackgroundImage")));
             this.exit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.exit.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -110,6 +115,7 @@ namespace CIS153_GitHubExample
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.SystemColors.HotTrack;
             this.ClientSize = new System.Drawing.Size(1875, 939);
             this.Controls.Add(this.exit);
@@ -118,6 +124,7 @@ namespace CIS153_GitHubExample
             this.Controls.Add(this.btn_1Player);
             this.Controls.Add(this.pic_connect4);
             this.Name = "Main_Menu";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form2";
             this.Load += new System.EventHandler(this.Main_Menu_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pic_connect4)).EndInit();
