@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,10 +12,12 @@ using System.Windows.Forms;
 namespace CIS153_GitHubExample
 {
 
-    List<PlayerStats> Stats = new List<PlayerStats>();
+   
     
     public partial class Form2 : Form
     {
+     List<PlayerStats> Stats = new List<PlayerStats>();
+    
         //ai game == 1 player mode 
         public static bool aiGame = false;
 
@@ -1260,7 +1263,7 @@ namespace CIS153_GitHubExample
                         string message = "Winner Red";
 
                         MessageBox.Show(message);
-                        File.AppendAllText(@"C:\Users\trist\Desktop\CIS153FinalProject-main\CIS153_GitHubExample\CIS153_GitHubExample\Resources\PlayerStats.txt", "1,0,0,1,\n");
+                        File.AppendAllText(@"CIS153_GitHubExample.Properties.Resources.TextFile1", "1,0,0,1,\n");
                         Stats.Add(new PlayerStats("1", "0", "0", "1"));
                     }
 
@@ -1273,7 +1276,7 @@ namespace CIS153_GitHubExample
                         string message = "Winner Blue";
 
                         MessageBox.Show(message);
-                        File.AppendAllText(@"C:\Users\trist\Desktop\CIS153FinalProject-main\CIS153_GitHubExample\CIS153_GitHubExample\Resources\PlayerStats.txt", "0,1,0,1,\n");
+                        File.AppendAllText(@"CIS153_GitHubExample.Properties.Resources.TextFile1", "0,1,0,1,\n");
                         Stats.Add(new PlayerStats("0", "1", "0", "1"));
                     }
 
@@ -1324,7 +1327,7 @@ namespace CIS153_GitHubExample
                         string message = "Winner Red";
 
                         MessageBox.Show(message);
-                        File.AppendAllText(@"C:\Users\trist\Desktop\CIS153FinalProject-main\CIS153_GitHubExample\CIS153_GitHubExample\Resources\PlayerStats.txt", "1,0,0,1,\n");
+                        File.AppendAllText(@"CIS153_GitHubExample.Properties.Resources.TextFile1", "1,0,0,1,\n");
                         Stats.Add(new PlayerStats("1", "0", "0", "1"));
                     }
 
@@ -1337,7 +1340,7 @@ namespace CIS153_GitHubExample
                         string message = "Winner Blue";
 
                         MessageBox.Show(message);
-                        File.AppendAllText(@"C:\Users\trist\Desktop\CIS153FinalProject-main\CIS153_GitHubExample\CIS153_GitHubExample\Resources\PlayerStats.txt", "0,1,0,1,\n");
+                        File.AppendAllText(@"CIS153_GitHubExample.Properties.Resources.TextFile1"0,1,0,1,\n");
                         Stats.Add(new PlayerStats("0", "1", "0", "1"));
                     }
 
@@ -1387,7 +1390,7 @@ namespace CIS153_GitHubExample
                         string message = "Winner Red";
 
                         MessageBox.Show(message);
-                        File.AppendAllText(@"C:\Users\trist\Desktop\CIS153FinalProject-main\CIS153_GitHubExample\CIS153_GitHubExample\Resources\PlayerStats.txt", "1,0,0,1,\n");
+                        File.AppendAllText(@"CIS153_GitHubExample.Properties.Resources.TextFile1", "1,0,0,1,\n");
                         Stats.Add(new PlayerStats("1", "0", "0", "1"));
                     }
 
@@ -1400,7 +1403,7 @@ namespace CIS153_GitHubExample
                         string message = "Winner Blue";
 
                         MessageBox.Show(message);
-                        File.AppendAllText(@"C:\Users\trist\Desktop\CIS153FinalProject-main\CIS153_GitHubExample\CIS153_GitHubExample\Resources\PlayerStats.txt", "0,1,0,1,\n");
+                        File.AppendAllText(@"CIS153_GitHubExample.Properties.Resources.TextFile1", "0,1,0,1,\n");
                         Stats.Add(new PlayerStats("0", "1", "0", "1"));
                     }
 
@@ -1414,7 +1417,8 @@ namespace CIS153_GitHubExample
 
             }
         }
-
+      }
+}
     
 
         
