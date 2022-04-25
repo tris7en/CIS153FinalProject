@@ -11,11 +11,7 @@ namespace CIS153_GitHubExample
         private const int numRows = 6;
         private const int numCols = 7;
         Cell[,] gameBoard = new Cell[numRows, numCols];
-        bool gameOver;
-        bool playerTurn;
-        int playerColor;
-        int aiColor;
-
+    
         public int getNumRows()
         {
             return numRows;
