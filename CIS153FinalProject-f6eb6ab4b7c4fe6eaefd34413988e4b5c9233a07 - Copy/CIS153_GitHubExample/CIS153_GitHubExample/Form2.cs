@@ -11,6 +11,8 @@ using System.Windows.Forms;
 namespace CIS153_GitHubExample
 {
 
+    List<PlayerStats> Stats = new List<PlayerStats>();
+    
     public partial class Form2 : Form
     {
         //ai game == 1 player mode 
@@ -989,6 +991,8 @@ namespace CIS153_GitHubExample
                         string message = "Winner Red";
 
                         MessageBox.Show(message);
+                        
+                        
 
                     }
 
