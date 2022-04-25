@@ -31,6 +31,7 @@ namespace CIS153_GitHubExample
         {
 
             InitializeComponent();
+            this.WindowState = FormWindowState.Maximized;
             //Need to set global varible equal to the form that was passed
 
             //so I have a reference to it in the button click
@@ -59,8 +60,24 @@ namespace CIS153_GitHubExample
             //      - send winner form 
             // disable buttons w/ disableForm();
 
+            
+            loadEndScreen2();
+
+            
         }
 
+        public void loadEndScreen2()            // opens the game end screen
+        {
+             End_Screen formToLoad3 = new End_Screen(this);
+
+             End_Screen formToLoadNoOverload3 = new End_Screen();
+
+             formToLoadNoOverload3.formPassedToMe(this);
+
+             formToLoad3.Show();
+
+             this.Hide();
+        }
 
         // check for win 
         // figure out how to make color dynamic OR copy and paste with blue replaced
@@ -538,8 +555,6 @@ namespace CIS153_GitHubExample
             catch { }
 
         }
-
-
 
 
 
