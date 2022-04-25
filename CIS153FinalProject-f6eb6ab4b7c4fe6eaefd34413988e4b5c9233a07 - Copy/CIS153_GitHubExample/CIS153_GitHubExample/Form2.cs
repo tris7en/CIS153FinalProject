@@ -79,18 +79,401 @@ namespace CIS153_GitHubExample
              this.Hide();
         }
 
-        // check for win 
-        // figure out how to make color dynamic OR copy and paste with blue replaced
-        private static bool checkForWin(Board gameBoard)
+
+        private static bool checkForBlueWin(Board gameBoard)
         {
 
-            // horizontal red
-            for (int x = 0; x < 5; x++)
+            // horizontal Blue
+            for (int x = 0; x <= 5; x++)
             {
 
                 int count = 0;
 
-                for (int y = 0; y < 6; y++)
+                for (int y = 0; y <= 6; y++)
+                {
+
+                    if (gameBoard.getCell(x, y).getButton().BackColor == Color.Blue)
+                    {
+                        count++;
+                    }
+                    else
+                    {
+                        count = 0;
+                    }
+
+                }
+
+                // breaking loop if count = 4 
+                if (count == 4)
+                {
+                    return gameOver = true;
+                }
+
+            }
+
+            // vertical Blue
+            for (int y = 0; y <= 6; y++)
+            {
+
+                int count = 0;
+
+                for (int x = 0; x <= 5; x++)
+                {
+
+                    if (gameBoard.getCell(x, y).getButton().BackColor == Color.Blue)
+                    {
+                        count++;
+                    }
+
+                    else
+                    {
+                        count = 0;
+                    }
+
+                }
+
+                // breaking loop if count = 4 
+                if (count == 4)
+                {
+                    return gameOver = true;
+                }
+
+            }
+
+
+            // up and left
+
+            for (int y = 0; y <= 6; y++)
+            {
+
+                int count = 0;
+
+                for (int x = 0; x <= 5; x++)
+                {
+
+                    // first color found
+                    if (gameBoard.getCell(x, y).getButton().BackColor == Color.Blue)
+                    {
+
+                        // !!!!! CHECK IF CHECKABLE
+                        if (gameBoard.getCell(x, y).getRow() >= 3 && gameBoard.getCell(x, y).getCol() >= 3)
+                        {
+
+                            count++;
+                            // second surrounding found
+
+                            if (gameBoard.getCell(x - 1, y - 1).getButton().BackColor == Color.Blue)
+                            {
+
+                                count++;
+
+                                // third surrounding found
+                                if (gameBoard.getCell(x - 2, y - 2).getButton().BackColor == Color.Blue)
+                                {
+
+                                    count++;
+
+                                    // fourth surrounding found
+                                    if (gameBoard.getCell(x - 3, y - 3).getButton().BackColor == Color.Blue)
+                                    {
+
+                                        count++;
+
+                                    }
+
+                                    else
+                                    {
+                                        count = 0;
+                                    }
+
+                                }
+
+                                else
+                                {
+                                    count = 0;
+                                }
+
+
+                            }
+
+                            else
+                            {
+                                count = 0;
+
+
+                            }
+
+
+
+                        }
+
+                    }
+
+                    else
+                    {
+                        count = 0;
+                    }
+
+                }
+
+                if (count == 4)
+                {
+                    return gameOver = true;
+                }
+
+            }
+
+            //down and right
+            for (int y = 0; y <= 6; y++)
+            {
+
+                int count = 0;
+
+                for (int x = 0; x <= 5; x++)
+                {
+
+                    // first color found
+                    if (gameBoard.getCell(x, y).getButton().BackColor == Color.Blue)
+                    {
+
+                        count++;
+
+                        // !!!!! CHECK IF CHECKABLE
+                        if (gameBoard.getCell(x, y).getRow() <= 2 && gameBoard.getCell(x, y).getCol() <= 3)
+                        {
+
+                            // second surrounding found 
+                            if (gameBoard.getCell(x + 1, y + 1).getButton().BackColor == Color.Blue)
+                            {
+                                count++;
+
+                                // third surrounding found
+                                if (gameBoard.getCell(x + 2, y + 2).getButton().BackColor == Color.Blue)
+                                {
+
+                                    count++;
+
+                                    // fourth surrounding found
+                                    if (gameBoard.getCell(x + 3, y + 3).getButton().BackColor == Color.Blue)
+                                    {
+                                        count++;
+                                    }
+
+                                    else
+                                    {
+                                        count = 0;
+                                    }
+
+                                }
+
+                                else
+                                {
+                                    count = 0;
+                                }
+                            }
+
+                        }
+
+                        else
+                        {
+                            count = 0;
+                        }
+
+                    }
+
+                    else
+                    {
+                        count = 0;
+                    }
+
+                }
+
+                if (count == 4)
+                {
+                    return gameOver = true;
+                }
+
+            }
+
+
+
+            // down and left 
+            for (int y = 0; y <= 6; y++)
+            {
+
+                int count = 0;
+
+                for (int x = 0; x <= 5; x++)
+                {
+
+                    // first color found
+                    if (gameBoard.getCell(x, y).getButton().BackColor == Color.Blue)
+                    {
+
+                        count++;
+
+                        // !!!!! CHECK IF CHECKABLE
+                        if (gameBoard.getCell(x, y).getRow() >= 3 && gameBoard.getCell(x, y).getCol() <= 3)
+                        {
+
+                            // down and left 
+                            // second surrounding found
+                            if (gameBoard.getCell(x - 1, y + 1).getButton().BackColor == Color.Blue)
+                            {
+
+                                count++;
+
+                                // third surrounding found
+                                if (gameBoard.getCell(x - 2, y + 2).getButton().BackColor == Color.Blue)
+                                {
+
+                                    count++;
+
+                                    // fourth surrounding found
+                                    if (gameBoard.getCell(x - 3, y + 3).getButton().BackColor == Color.Blue)
+                                    {
+
+                                        count++;
+
+                                    }
+
+                                    else
+                                    {
+                                        count = 0;
+                                    }
+
+                                }
+
+                                else
+                                {
+                                    count = 0;
+                                }
+
+                            }
+
+                            else
+                            {
+                                count = 0;
+                            }
+
+                        }
+
+                    }
+
+                    else
+                    {
+                        count = 0;
+                    }
+
+                }
+
+                if (count == 4)
+                {
+                    return gameOver = true;
+                }
+
+            }
+
+
+
+
+
+
+
+            // up and right 
+            for (int y = 0; y <= 6; y++)
+            {
+
+                int count = 0;
+
+                for (int x = 0; x <= 5; x++)
+                {
+
+                    // first color found
+                    if (gameBoard.getCell(x, y).getButton().BackColor == Color.Blue)
+                    {
+
+                        count++;
+
+
+                        // !!!!! CHECK IF CHECKABLE
+                        if (gameBoard.getCell(x, y).getRow() <= 2 && gameBoard.getCell(x, y).getCol() >= 3)
+                        {
+
+                            //up and right 
+                            // second surrounding found 
+                            if (gameBoard.getCell(x + 1, y - 1).getButton().BackColor == Color.Blue)
+                            {
+
+                                count++;
+
+                                // third surrounding found
+                                if (gameBoard.getCell(x + 2, y - 2).getButton().BackColor == Color.Blue)
+                                {
+
+                                    count++;
+
+                                    // fourth surrounding found
+                                    if (gameBoard.getCell(x + 3, y - 3).getButton().BackColor == Color.Blue)
+                                    {
+
+                                        count++;
+
+                                    }
+
+                                    else
+                                    {
+                                        count = 0;
+                                    }
+
+                                }
+
+                                else
+                                {
+                                    count = 0;
+                                }
+
+
+                            }
+
+                            else
+                            {
+                                count = 0;
+                            }
+
+                        }
+
+                    }
+
+                    else
+                    {
+                        count = 0;
+                    }
+
+                }
+
+                if (count == 4)
+                {
+                    return gameOver = true;
+                }
+
+            }
+
+            return gameOver = false;
+
+        }
+
+        
+        private static bool checkForWin(Board gameBoard)
+        {
+
+            // horizontal red
+            for (int x = 0; x <= 5; x++)
+            {
+
+                int count = 0;
+
+                for (int y = 0; y <= 6; y++)
                 {
 
                     if (gameBoard.getCell(x, y).getButton().BackColor == Color.Red)
@@ -112,16 +495,13 @@ namespace CIS153_GitHubExample
 
             }
 
-
-
-
             // vertical red
-            for (int y = 0; y < 6; y++)
+            for (int y = 0; y <= 6; y++)
             {
 
                 int count = 0;
 
-                for (int x = 0; x < 5; x++)
+                for (int x = 0; x <= 5; x++)
                 {
 
                     if (gameBoard.getCell(x, y).getButton().BackColor == Color.Red)
@@ -147,12 +527,12 @@ namespace CIS153_GitHubExample
 
             // up and left
 
-            for (int y = 0; y < 6; y++)
+            for (int y = 0; y <= 6; y++)
             {
 
                 int count = 0;
 
-                for (int x = 0; x < 5; x++)
+                for (int x = 0; x <= 5; x++)
                 {
 
                     // first color found
@@ -228,12 +608,12 @@ namespace CIS153_GitHubExample
             }
 
             //down and right
-            for (int y = 0; y < 6; y++)
+            for (int y = 0; y <= 6; y++)
             {
 
                 int count = 0;
 
-                for (int x = 0; x < 5; x++)
+                for (int x = 0; x <= 5; x++)
                 {
 
                     // first color found
@@ -302,12 +682,12 @@ namespace CIS153_GitHubExample
 
 
             // down and left 
-            for (int y = 0; y < 6; y++)
+            for (int y = 0; y <= 6; y++)
             {
 
                 int count = 0;
 
-                for (int x = 0; x < 5; x++)
+                for (int x = 0; x <= 5; x++)
                 {
 
                     // first color found
@@ -385,12 +765,12 @@ namespace CIS153_GitHubExample
 
 
             // up and right 
-            for (int y = 0; y < 6; y++)
+            for (int y = 0; y <= 6; y++)
             {
 
                 int count = 0;
 
-                for (int x = 0; x < 5; x++)
+                for (int x = 0; x <= 5; x++)
                 {
 
                     // first color found
@@ -463,11 +843,12 @@ namespace CIS153_GitHubExample
 
             }
 
-
-            return gameOver;
+            return gameOver = false;
+            
         }
 
 
+        
         // test to change cells 
         public void messWithBoard()
         {
@@ -575,8 +956,6 @@ namespace CIS153_GitHubExample
 
         }
 
-        
-
         private void col2Click(object sender, EventArgs e)
         {
 
@@ -604,12 +983,24 @@ namespace CIS153_GitHubExample
 
 
                     checkForWin(gameBoard);
-
-
-                    if (gameOver == true)
+                    if (gameOver == true && turn == true)
                     {
 
+                        string message = "Winner Red";
 
+                        MessageBox.Show(message);
+
+                    }
+
+                    checkForBlueWin(gameBoard);
+
+
+                    if (gameOver == true && turn == false)
+                    {
+
+                        string message = "Winner Blue";
+
+                        MessageBox.Show(message);
 
                     }
 
@@ -663,7 +1054,29 @@ namespace CIS153_GitHubExample
                     }
 
 
+                   
+
                     checkForWin(gameBoard);
+                    if (gameOver == true && turn == true)
+                    {
+
+                        string message = "Winner Red";
+
+                        MessageBox.Show(message);
+
+                    }
+
+                    checkForBlueWin(gameBoard);
+
+
+                    if (gameOver == true && turn == false)
+                    {
+
+                        string message = "Winner Blue";
+
+                        MessageBox.Show(message);
+
+                    }
 
                     //makes other players turn start
                     turn = !turn;
@@ -704,6 +1117,26 @@ namespace CIS153_GitHubExample
                     }
 
                     checkForWin(gameBoard);
+                    if (gameOver == true && turn == true)
+                    {
+
+                        string message = "Winner Red";
+
+                        MessageBox.Show(message);
+
+                    }
+
+                    checkForBlueWin(gameBoard);
+
+
+                    if (gameOver == true && turn == false)
+                    {
+
+                        string message = "Winner Blue";
+
+                        MessageBox.Show(message);
+
+                    }
 
 
                     //makes other players turn start
@@ -745,6 +1178,26 @@ namespace CIS153_GitHubExample
 
 
                     checkForWin(gameBoard);
+                    if (gameOver == true && turn == true)
+                    {
+
+                        string message = "Winner Red";
+
+                        MessageBox.Show(message);
+
+                    }
+
+                    checkForBlueWin(gameBoard);
+
+
+                    if (gameOver == true && turn == false)
+                    {
+
+                        string message = "Winner Blue";
+
+                        MessageBox.Show(message);
+
+                    }
 
 
                     //makes other players turn start
@@ -785,6 +1238,26 @@ namespace CIS153_GitHubExample
 
 
                     checkForWin(gameBoard);
+                    if (gameOver == true && turn == true)
+                    {
+
+                        string message = "Winner Red";
+
+                        MessageBox.Show(message);
+
+                    }
+
+                    checkForBlueWin(gameBoard);
+
+
+                    if (gameOver == true && turn == false)
+                    {
+
+                        string message = "Winner Blue";
+
+                        MessageBox.Show(message);
+
+                    }
 
                     //makes other players turn start
                     turn = !turn;
@@ -827,6 +1300,26 @@ namespace CIS153_GitHubExample
 
 
                     checkForWin(gameBoard);
+                    if (gameOver == true && turn == true)
+                    {
+
+                        string message = "Winner Red";
+
+                        MessageBox.Show(message);
+
+                    }
+
+                    checkForBlueWin(gameBoard);
+
+
+                    if (gameOver == true && turn == false)
+                    {
+
+                        string message = "Winner Blue";
+
+                        MessageBox.Show(message);
+
+                    }
 
                     //makes other players turn start
                     turn = !turn;
@@ -839,6 +1332,7 @@ namespace CIS153_GitHubExample
             }
 
         }
+
 
         private void col1Click(object sender, EventArgs e)
         {
@@ -865,6 +1359,28 @@ namespace CIS153_GitHubExample
                     }
 
                     checkForWin(gameBoard);
+                    if (gameOver == true && turn == true)
+                    {
+
+
+
+                        string message = "Winner Red";
+
+                        MessageBox.Show(message);
+
+                    }
+
+                    checkForBlueWin(gameBoard);
+
+
+                    if (gameOver == true && turn == false)
+                    {
+
+                        string message = "Winner Blue";
+
+                        MessageBox.Show(message);
+
+                    }
 
                     //makes other players turn start
                     turn = !turn;
@@ -877,5 +1393,8 @@ namespace CIS153_GitHubExample
             }
         }
 
-    }
-}
+    
+
+        
+
+      
